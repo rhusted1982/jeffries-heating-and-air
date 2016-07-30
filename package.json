@@ -1,0 +1,44 @@
+{
+  "name": "jeffries-heating-and-air",
+  "version": "1.0.0",
+  "description": "The SPA application for Jeffries Heating and Air.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel open lint",
+    "open": "babel-node tools/srcServer.js",
+    "lint": "esw webpack.config.* src tools --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhusted1982/jeffries-heating-and-air.git"
+  },
+  "author": "Richard Husted",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhusted1982/jeffries-heating-and-air/issues"
+  },
+  "homepage": "https://github.com/rhusted1982/jeffries-heating-and-air#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-router": "^2.6.1",
+    "toastr": "^2.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "eslint": "^3.2.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-react": "^5.2.2",
+    "eslint-watch": "^2.1.14",
+    "express": "^4.14.0",
+    "npm-run-all": "^2.3.0",
+    "open": "0.0.5",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1"
+  }
+}
