@@ -20,7 +20,7 @@ app.get('*', function(request, response) {
 });
 
 app.listen(port, function(error) {
-    if(error) {
+    if (error) {
         console.log(error);
     } else {
         open(`http://localhost:${port}`);

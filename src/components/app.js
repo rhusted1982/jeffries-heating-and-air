@@ -1,9 +1,17 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
+import Header from './header/header';
 
-const App = () => {
+const App = (props) => {
     return (
-        <div>App</div>
+        <div className="container-fluid">
+            <Header />
+            {props.children}
+        </div>
     );
+};
+
+App.propTypes = {
+    children: PropTypes.object.isRequired
 };
 
 export default App;
