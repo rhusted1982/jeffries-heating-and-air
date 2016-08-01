@@ -4,10 +4,10 @@ const ContactHeader = (props) => {
     return (
         <div className="contactHeader">
             <div className="row">
-                <div className="col-xs-5 centered">
-                    <span className="caption">Contact Us Today!</span>
+                <div className="col-xs-4 centered">
+                    <span className="caption">Contact Us!</span>
                 </div>
-                <div className="col-xs-5">
+                <div className="col-xs-6">
                     <div className="row">
                         <span className="info">{props.phoneNumber}</span>
                     </div>
@@ -16,10 +16,9 @@ const ContactHeader = (props) => {
                     </div>
                 </div>
                 <div className="col-xs-2 centered">
-                    <a href={props.facebook}><i className="fa fa-facebook-square fa-5x pull-right" aria-hidden="true"></i></a>
+                    <a href={props.facebook}><i className="fa fa-facebook-square fa-2x pull-right" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <hr />
         </div>
     );
 };

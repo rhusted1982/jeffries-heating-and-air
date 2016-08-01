@@ -1,25 +1,23 @@
-div.contactHeader {
-    margin-top: 20px;
+body {
+    padding-top: 20px;
     font-family: Arial, Helvetica, SansSerif;
 }
 
 div.contactHeader span.caption {
     font-weight: bold;
-    font-size: 2.75em;
     color:blue;
-    top: 50px;
 }
 
 div.contactHeader div.centered {
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 
 div.contactHeader span.info {
-    font-size: 2.5em;
+
 }
 
-div.contactHeader hr {
+div.header hr {
     border:none;
     height: 5px;
     background-color:blue;

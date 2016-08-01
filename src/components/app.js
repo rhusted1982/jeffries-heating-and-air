@@ -3,7 +3,7 @@ import Header from './header/header';
 
 const App = (props) => {
     return (
-        <div className="container-fluid">
+        <div>
             <Header />
             {props.children}
         </div>
