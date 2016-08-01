@@ -2,16 +2,24 @@ import React, {PropTypes} from 'react';
 
 const ContactHeader = (props) => {
     return (
-        <div className="col-sm-12 container-fluid">
+        <div className="contactHeader">
             <div className="row">
-                <span style={{color: 'blue', fontSize: 'large', fontWeight: 'bold'}}>Service 24/7!   Contact Us Today!</span>
+                <div className="col-xs-5 centered">
+                    <span className="caption">Contact Us Today!</span>
+                </div>
+                <div className="col-xs-5">
+                    <div className="row">
+                        <span className="info">{props.phoneNumber}</span>
+                    </div>
+                    <div className="row">
+                        <span className="info">{props.email}</span>
+                    </div>
+                </div>
+                <div className="col-xs-2 centered">
+                    <a href={props.facebook}><i className="fa fa-facebook-square fa-5x pull-right" aria-hidden="true"></i></a>
+                </div>
             </div>
-            <div className="row">
-                <span style={{fontSize: 'large'}}>{props.phoneNumber}</span>
-                <span style={{color: 'blue', fontSize: 'x-large'}}>|</span>
-                <span style={{fontSize: 'large'}}>{props.email}</span>
-                <a href={props.facebook}><i className="fa fa-facebook-square fa-2x pull-right" aria-hidden="true"></i></a>
-            </div>
+            <hr />
         </div>
     );
 };
