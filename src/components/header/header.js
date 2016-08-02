@@ -23,7 +23,10 @@ const Header = (props) => {
                 <hr />
             </div>
             <div className="row">
-                {/*<img className="brand" src={props.brandImage}></img>*/}
+                <img className="brand img-responsive" src={props.brandImage}></img>
+            </div>
+            <div className="row">
+                <hr />
             </div>
         </div>
     );

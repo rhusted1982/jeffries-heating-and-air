@@ -1,8 +1,11 @@
 import React from 'react';
+import Reviews from './../review/reviews';
 
 const Home = () => {
     return (
-        <div className="container-fluid"></div>
+        <div className="home">
+            <Reviews />
+        </div>
     );
 };
 

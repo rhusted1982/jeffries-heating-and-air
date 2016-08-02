@@ -3,13 +3,15 @@ import {Link} from 'react-router';
 import LinkButton from '../common/linkButton';
 import TextInput from './../common/textInput';
 import SelectInput from './../common/selectInput';
+import TitleDiv from './../common/titleDiv';
 
 const ContactPage = (props) => {
     return (
         <div className="contactPage">
+            <TitleDiv title="Contact Us" />
             <TextInput name="name" label="Your Name" value={props.info.name} onChange={props.onChange} error={props.errors.name} />
             <SelectInput name="reason" label="Reason for Contacting" value={props.info.reason} onChange={props.onChange} error={props.errors.reason} options={[]} />
-            <label className="form-control">Please specify atleast one:</label>
+            <label className="control-label">Please specify atleast one:</label>
             <TextInput type="email" name="email" label="Your Email" value={props.info.email} onChange={props.onChange} error={props.errors.email} />
             <TextInput type="tel" name="phoneNumber" label="Your Phone Number" value={props.info.phoneNumber} onChange={props.onChange} error={props.errors.phoneNumber}/>
             <div className="footer">
