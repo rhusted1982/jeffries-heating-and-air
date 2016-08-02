@@ -22,6 +22,9 @@ const Header = (props) => {
             <div className="row">
                 <hr />
             </div>
+            <div className="row">
+                {/*<img className="brand" src={props.brandImage}></img>*/}
+            </div>
         </div>
     );
 };
@@ -29,7 +32,8 @@ const Header = (props) => {
 Header.propTypes = {
     phoneNumber: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    facebook: PropTypes.string.isRequired
+    facebook: PropTypes.string.isRequired,
+    brandImage: PropTypes.string.isRequired
 };
 
 export default Header;

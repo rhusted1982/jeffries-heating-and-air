@@ -11,15 +11,13 @@ class Contact extends React.Component {
                 email: '',
                 phoneNumber: '',
                 name: '',
-                reason: '',
-                message: ''
+                reason: ''
             },
             errors: {
                 email: '',
                 phoneNumber: '',
                 name: '',
-                reason: '',
-                message: ''
+                reason: ''
             }
         };
         this.changeInfo = this.changeInfo.bind(this);
@@ -34,7 +32,34 @@ class Contact extends React.Component {
 
     sendInfo(event) {
         event.preventDefault();
-        browserHistory.push('/');
+        if(!this.setErrors()) {
+            browserHistory.push('/');
+        }
+    }
+
+    setErrors() {
+        const info = this.state.info;
+        let errors = {
+            email: '',
+            phoneNumber: '',
+            name: '',
+            reason: '',
+        };
+        let hasErrors = false;
+        if(!info.name) {
+            errors.name = 'Please let us know your name.';
+            hasErrors = true;
+        }
+        if(!info.email && !info.phoneNumber) {
+            errors.email = errors.phoneNumber = 'Please let us know how to get in touch with you.';
+            hasErrors = true;
+        }
+        if(!info.reason) {
+            errors.reason = 'Please specify the reason you are contacting us.';
+            hasErrors = true;
+        }
+        this.setState({errors: errors});
+        return hasErrors;
     }
 
     render() {

@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
-import CallButton from './../common/callButton';
+import LinkButton from '../common/linkButton';
 
 const Footer = (props) => {
     return (
         <div className="footer">
             <div className="row">
-                <CallButton phoneNumber={props.phoneNumber} />
+                <LinkButton label="Call Us" href={'tel:'+ props.phoneNumber} />
                 <Link to="/contact" className="btn btn-primary">Send Us a Message</Link>
             </div>
         </div>

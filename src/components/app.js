@@ -22,7 +22,7 @@ const App = (props) => {
     );
     return (
         <div className="container-fluid">
-            <Header phoneNumber={formattedPhoneNumber} email={email} facebook={facebook}/>
+            <Header phoneNumber={formattedPhoneNumber} email={email} facebook={facebook} brandImage={require('./../images/brand.png')} />
             {children}
             {UseFooter}
         </div>
