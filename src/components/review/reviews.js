@@ -1,16 +1,21 @@
 import React from 'react';
 import Review from './review';
 import TitleDiv from './../common/titleDiv';
+import ReviewData from '../../data/review';
 
 const Reviews = () => {
+    let left = true;
+    let reviews = [];
+    ReviewData.forEach(element => {
+        const name = element.name ? element.name : 'Anonymous';
+        const side = left ? 'left' : 'right';
+        left = !left;
+        reviews.push(<Review comment={element.comment} name={name} side={side} />);
+    });
     return (
         <div className="reviews">
-            <TitleDiv title="Reviews" />
-            <Review comment="I think this is just the most amazing site. I really love it. Highly recommend." name="Richard Husted" side="left"/>
-            <br />
-            <Review comment="I think this is just the most amazing site. I really love it. Highly recommend." name="Richard Husted" side="right"/>
-            <br />
-            <Review comment="I think this is just the most amazing site. I really love it. Highly recommend." name="Richard Husted" side="left"/>
+            <TitleDiv title="reviews" />
+            {reviews}
         </div>
     );
 };

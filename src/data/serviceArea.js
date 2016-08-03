@@ -1,0 +1,43 @@
+export const all = [
+    'London',
+    'Somerset',
+    'Lancaster',
+    'Bethelridge',
+    'Bronston',
+    'Burnside',
+    'Science Hill',
+    'Brodhead',
+    'Eubank',
+    'Orlando',
+    'Lily',
+    "King's Mountain",
+    'Dunnville',
+    'Nancy',
+    'Yosemite',
+    'Waynesburg',
+    'Hustonville',
+    'Ferguson',
+    'Paint Lick',
+    'Mc Kinney',
+    'Stanford',
+    'East Bernstadt',
+    'Livingston',
+    'Crab Orchard',
+    'Middleburg',
+    'Bryantsville',
+    'Windsor',
+    'Mount Vernon',
+    'Wildie',
+    'Renfro Valley',
+    'Pittsburg',
+    'Bush',
+    'Liberty',
+    'Tateville'
+    ];
+
+export const top = [
+    'London',
+    'Somerset',
+    'Lancaster',
+    'Burnside'
+]
