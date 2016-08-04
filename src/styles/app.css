@@ -17,6 +17,11 @@ div.header {
     font-weight: bold;
 }
 
+div.header span.contact-info {
+    position: relative;
+    margin: 0 auto;
+}
+
 div.header span.caption {
     color:#337ab7;
 }
@@ -113,11 +118,11 @@ div.titleDiv h3 {
 }
 
 div.home {
-    padding-bottom: 25%;
+    padding-bottom: 100px;
 }
 
 div.service img.img-24-7 {
-    width:100%;
+    width:auto;
     height:auto;
 }
 

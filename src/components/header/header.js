@@ -9,7 +9,7 @@ const Header = (props) => {
                 </div>
                 <div className="col-xs-6">
                     <div className="row">
-                        <span>{props.phoneNumber}</span>
+                        <span className="contact-info">{props.phoneNumber}</span>
                     </div>
                     <div className="row">
                         <span>{props.email}</span>
