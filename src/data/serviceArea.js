@@ -18,7 +18,7 @@ export const all = [
     'Hustonville',
     'Ferguson',
     'Paint Lick',
-    'Mc Kinney',
+    'McKinney',
     'Stanford',
     'East Bernstadt',
     'Livingston',
@@ -40,4 +40,4 @@ export const top = [
     'Somerset',
     'Lancaster',
     'Burnside'
-]
+];

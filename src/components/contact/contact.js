@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import {browserHistory} from 'react-router';
 import ContactPage from './contactPage';
+import $ from 'jquery';
+import toastr from 'toastr';
 
 class Contact extends React.Component {
 
@@ -33,7 +35,9 @@ class Contact extends React.Component {
     sendInfo(event) {
         event.preventDefault();
         if(!this.setErrors()) {
+            $.post('/contact');
             browserHistory.push('/');
+            toastr.success('Message sent!');
         }
     }
 
