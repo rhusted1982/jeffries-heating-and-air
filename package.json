@@ -4,7 +4,7 @@
   "description": "The SPA application for Jeffries Heating and Air.",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel open lint",
+    "start": "babel-node src/server.js",
     "open": "babel-node src/server.js",
     "lint": "esw webpack.config.* src tools --watch"
   },
