@@ -1,6 +1,6 @@
-import path from 'path';
+const path = require('path');
 
-export default {
+module.exports = {
     debug: true,
     devtool: 'cheap-module-eval-source-map',
     noInfo: false,

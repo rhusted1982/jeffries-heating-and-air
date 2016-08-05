@@ -1,6 +1,6 @@
-import settings from './../data/email';
+const settings = require('./../data/email');
 
-export default (app) => {
+module.exports = (app) => {
     app.post('/contact', function(request, response) {
         const mailgun = require('mailgun-js')( {apiKey: settings.key, domain: settings.domain} );
         const data = {

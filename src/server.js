@@ -1,31 +1,20 @@
-import express from 'express';
-import webpack from 'webpack';
-import path from 'path';
-import open from 'open';
-import config from '../webpack.config.dev';
-import email from './api/email';
+const express = require('express');
+const open = require('open');
 
 /*eslint-disable no-console */
 
-const port = process.env.PORT || 9682;
-const app = express();
-const compiler = webpack(config);
+const Server = (args) => {
+    const app = express();
+    args.uses.forEach(use => app.use(use));
+    args.apis.forEach(api => api(app));
+    app.listen(args.port, function(error) {
+        if(error) {
+            console.log(error);
+        } else {
+            open(`http://localhost:${args.port}`);
+        }
+    });
+    app.get('*', args.default);
+};
 
-email(app);
-
-app.use(require('webpack-dev-middleware')(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath
-}));
-
-app.get('*', function(request, response) {
-    response.sendFile(path.join(__dirname, './index.html'));
-});
-
-app.listen(port, function(error) {
-    if (error) {
-        console.log(error);
-    } else {
-        open(`http://localhost:${port}`);
-    }
-});
+module.exports = Server;
