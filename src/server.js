@@ -7,7 +7,7 @@ import email from './api/email';
 
 /*eslint-disable no-console */
 
-const port = 9682;
+const port = process.env.port || 9682;
 const app = express();
 const compiler = webpack(config);
 
