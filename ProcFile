@@ -1,1 +1,1 @@
-web node src/prodServer.js
+web: node src/prodServer.js
