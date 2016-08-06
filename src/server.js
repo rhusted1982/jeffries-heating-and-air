@@ -1,10 +1,11 @@
-const express = require('express');
-const open = require('open');
-
+/*eslint-disable no-var */
 /*eslint-disable no-console */
 
-const Server = (args) => {
-    const app = express();
+var express = require('express');
+var open = require('open');
+
+module.exports = (args) => {
+    var app = express();
     args.uses.forEach(use => app.use(use));
     args.apis.forEach(api => api(app));
     app.listen(args.port, function(error) {
@@ -16,5 +17,3 @@ const Server = (args) => {
     });
     app.get('*', args.default);
 };
-
-module.exports = Server;

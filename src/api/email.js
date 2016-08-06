@@ -1,9 +1,11 @@
-const settings = require('./../data/email');
+/*eslint-disable no-var */
+
+var settings = require('./../data/email');
 
 module.exports = (app) => {
     app.post('/contact', function(request, response) {
-        const mailgun = require('mailgun-js')( {apiKey: settings.key, domain: settings.domain} );
-        const data = {
+        var mailgun = require('mailgun-js')( {apiKey: settings.key, domain: settings.domain} );
+        var data = {
             from: 'amylaseter@att.net',
             to: settings.address,
             subject: 'Test',

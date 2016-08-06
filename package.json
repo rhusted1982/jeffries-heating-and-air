@@ -4,9 +4,17 @@
   "description": "The SPA application for Jeffries Heating and Air.",
   "main": "index.js",
   "scripts": {
-    "start:dev": "npm-run-all --parallel open:dev lint:dev",
+    "dev": "npm-run-all --parallel open:dev lint:dev",
     "open:dev": "babel-node src/devServer.js",
-    "lint:dev": "esw webpack.config.* src tools --watch"
+    "lint:dev": "npm run lint -- --watch",
+    "preprod": "npm-run-all clean-dist lint:prod build:prod",
+    "prod": "babel-node src/tools/buildJs.js",
+    "postprod": "node src/prodServer.js",
+    "lint:prod": "npm run lint",
+    "build:prod": "babel-node src/tools/buildHtml.js",
+    "clean-dist": "npm run remove-dist && mkdir dist",
+    "remove-dist": "node_modules/.bin/rimraf ./dist",
+    "lint": "esw webpack.config.* src"
   },
   "repository": {
     "type": "git",
@@ -20,9 +28,12 @@
   "homepage": "https://github.com/rhusted1982/jeffries-heating-and-air#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "cheerio": "^0.20.0",
     "compression": "^1.6.2",
     "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "font-awesome": "^4.6.3",
+    "fs": "0.0.2",
     "jquery": "^3.1.0",
     "mailgun-js": "^0.7.11",
     "open": "0.0.5",

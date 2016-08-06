@@ -1,11 +1,12 @@
-const webpack = require('webpack');
-const path = require('path');
+import webpack from 'webpack';
+import webpackDevMiddleWare from 'webpack-dev-middleware';
+import path from 'path';
+import config from './../webpack.config.dev';
 const email = require('./api/email');
 const Server = require('./server');
-const config = require('./../webpack.config.dev');
 
 const compiler = webpack(config);
-const middleware = require('webpack-dev-middleware')(compiler, {
+const middleware = webpackDevMiddleWare(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath
 });
