@@ -7,11 +7,11 @@
     "dev": "npm-run-all --parallel open:dev lint:dev",
     "open:dev": "babel-node src/devServer.js",
     "lint:dev": "npm run lint -- --watch",
-    "preprod": "npm-run-all clean-dist lint:prod build:prod",
+    "preprod": "npm-run-all clean-dist lint:prod html",
     "prod": "babel-node src/tools/buildJs.js",
     "postprod": "node src/prodServer.js",
     "lint:prod": "npm run lint",
-    "build:prod": "babel-node src/tools/buildHtml.js",
+    "html": "babel-node src/tools/buildHtml.js",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "lint": "esw webpack.config.* src"
