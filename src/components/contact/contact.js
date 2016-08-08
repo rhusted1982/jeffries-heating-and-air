@@ -4,6 +4,8 @@ import ContactPage from './contactPage';
 import $ from 'jquery';
 import toastr from 'toastr';
 import WorkingPage from './../common/workingPage';
+import validator from 'validator';
+import phone from 'phone';
 
 class Contact extends React.Component {
 
@@ -77,12 +79,20 @@ class Contact extends React.Component {
             errors.name = 'Please let us know your name.';
             hasErrors = true;
         }
+        if(!info.reason) {
+            errors.reason = 'Please specify the reason you are contacting us.';
+            hasErrors = true;
+        }
         if(!info.email && !info.phoneNumber) {
             errors.email = errors.phoneNumber = 'Please let us know how to get in touch with you.';
             hasErrors = true;
         }
-        if(!info.reason) {
-            errors.reason = 'Please specify the reason you are contacting us.';
+        if(info.email && !validator.isEmail(info.email)) {
+            errors.email = 'Please specify a valid email.';
+            hasErrors = true;
+        }
+        if(info.phoneNumber && !/^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/.exec(info.phoneNumber)) {
+            errors.phoneNumber = 'Please specify a valid phone number.';
             hasErrors = true;
         }
         this.setState({errors: errors});
