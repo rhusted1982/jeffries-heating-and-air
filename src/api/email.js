@@ -1,14 +1,12 @@
 /*eslint-disable no-var */
 
-var settings = require('./../data/email');
-
 module.exports = (app) => {
     app.post('/contact', function(request, response) {
-        var mailgun = require('mailgun-js')( {apiKey: settings.key, domain: settings.domain} );
+        var mailgun = require('mailgun-js')( {apiKey: process.env.MailgunKey, domain: process.env.MailgunDomain} );
         var data = {
-            from: 'amylaseter@att.net',
-            to: settings.address,
-            subject: 'Test',
+            from: process.env.MailgunTestEmail,
+            to: process.env.MailgunEmail,
+            subject: 'Test Heroku',
             text: 'Testing Testing 123'
         };
         mailgun.messages().send(data);
