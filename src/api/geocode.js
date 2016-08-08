@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    app.post('/geocode/:latitude/:longitude', function(request, response) {
+    app.post('/geocode', function(request, response) {
         response.sendStatus(200);
     });
 };

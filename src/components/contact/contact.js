@@ -35,7 +35,12 @@ class Contact extends React.Component {
     sendInfo(event) {
         event.preventDefault();
         if(!this.setErrors()) {
-            $.post('/contact');
+            $.ajax({
+                url: '/contact',
+                data: JSON.stringify(this.state.info),
+                contentType: 'application/json',
+                type: 'post'
+            });
             browserHistory.push('/');
             toastr.success('Message sent!');
         }

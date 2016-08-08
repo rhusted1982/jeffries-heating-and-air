@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/rhusted1982/jeffries-heating-and-air#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "cheerio": "^0.20.0",
     "compression": "^1.6.2",
