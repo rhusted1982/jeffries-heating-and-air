@@ -146,3 +146,15 @@ div.deal img {
 #toast-container > div {
     opacity: 1;
 }
+
+div.workingPage h3 {
+    position:relative;
+    margin: 0 auto;
+}
+
+div.workingPage i {
+    position:relative;
+    margin: 0 auto;
+    font-size: 10em;
+    color: #337ab7;
+}

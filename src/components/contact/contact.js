@@ -3,6 +3,7 @@ import {browserHistory} from 'react-router';
 import ContactPage from './contactPage';
 import $ from 'jquery';
 import toastr from 'toastr';
+import WorkingPage from './../common/workingPage';
 
 class Contact extends React.Component {
 
@@ -20,7 +21,8 @@ class Contact extends React.Component {
                 phoneNumber: '',
                 name: '',
                 reason: ''
-            }
+            },
+            working: false
         };
         this.changeInfo = this.changeInfo.bind(this);
         this.sendInfo = this.sendInfo.bind(this);
@@ -34,15 +36,31 @@ class Contact extends React.Component {
 
     sendInfo(event) {
         event.preventDefault();
+        let success = true;
         if(!this.setErrors()) {
             $.ajax({
                 url: '/contact',
                 data: JSON.stringify(this.state.info),
                 contentType: 'application/json',
-                type: 'post'
+                type: 'post',
+                error: function() {
+                    success = false;
+                },
+                complete: function() {
+                    if(success) {
+                        setTimeout(function () {
+                            browserHistory.push('/');
+                            toastr.success('Message sent!');
+                        }, 1000);
+                    } else {
+                        setTimeout(function () {
+                            this.setState({working: false});
+                            toastr.error('Message failed to send!');
+                        }.bind(this), 1000);
+                    }
+                }.bind(this)
             });
-            browserHistory.push('/');
-            toastr.success('Message sent!');
+            this.setState({working: true});
         }
     }
 
@@ -72,9 +90,13 @@ class Contact extends React.Component {
     }
 
     render() {
+        let content = <ContactPage info={this.state.info} errors={this.state.errors} onChange={this.changeInfo} phoneNumber={this.props.phoneNumber} onSubmit={this.sendInfo} />;
+        if(this.state.working) {
+            content = <WorkingPage label="Sending Message"/>;
+        }
         return (
           <div className="contact">
-              <ContactPage info={this.state.info} errors={this.state.errors} onChange={this.changeInfo} phoneNumber={this.props.phoneNumber} onSubmit={this.sendInfo} />
+              {content}
           </div>
         );
     }

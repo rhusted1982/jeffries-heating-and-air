@@ -7,13 +7,17 @@ class ServiceArea extends React.Component
     constructor() {
         super();
         this.state = {
-            canGeolocate: navigator.geolocation != undefined
+            canGeolocate: navigator.geolocation != undefined,
+            working: false
         };
         this.onGeolocateClick.bind(this);
     }
     onGeolocateClick() {
         navigator.geolocation.getCurrentPosition(function (position) {
-            $.post(`/geocode?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`);
+            $.ajax({
+                url: `/geocode?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`,
+                type: 'post'
+            });
         });
     }
 
