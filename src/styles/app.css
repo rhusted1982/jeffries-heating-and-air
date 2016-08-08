@@ -58,6 +58,10 @@ div.footer a {
     margin: 0 0 5px 0;
 }
 
+div.footer i {
+    padding-top: 3px;
+}
+
 div.footer button {
     width: 100%;
     margin: 0 0 5px 0;

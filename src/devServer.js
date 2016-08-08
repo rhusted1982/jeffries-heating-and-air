@@ -4,7 +4,7 @@ import path from 'path';
 import config from './../webpack.config.dev';
 const email = require('./api/email');
 const geocode = require('./api/geocode');
-const Server = require('./server');
+const server = require('./server');
 
 const compiler = webpack(config);
 const middleware = webpackDevMiddleWare(compiler, {
@@ -12,7 +12,7 @@ const middleware = webpackDevMiddleWare(compiler, {
     publicPath: config.output.publicPath
 });
 
-Server({
+server({
     port: 9682,
     apis : [email, geocode],
     uses: [middleware],

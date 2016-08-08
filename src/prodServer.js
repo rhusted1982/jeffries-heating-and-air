@@ -3,11 +3,11 @@ var express = require('express');
 var path = require('path');
 var email = require('./api/email');
 const geocode = require('./api/geocode');
-var Server = require('./server');
+var server = require('./server');
 var compression = require('compression');
 
-Server({
-    port: process.env.PORT || 1982,
+server({
+    port: process.env.PORT || 9682,
     apis : [email, geocode],
     uses: [express.static('dist'), compression()],
     default: function(request, response) {
