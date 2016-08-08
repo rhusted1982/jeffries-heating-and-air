@@ -5,7 +5,6 @@ import $ from 'jquery';
 import toastr from 'toastr';
 import WorkingPage from './../common/workingPage';
 import validator from 'validator';
-import phone from 'phone';
 
 class Contact extends React.Component {
 

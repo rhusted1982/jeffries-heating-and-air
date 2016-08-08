@@ -40,7 +40,6 @@
     "mailgun-js": "^0.7.11",
     "open": "0.0.5",
     "path": "^0.12.7",
-    "phone": "^1.0.8",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-router": "^2.6.1",
