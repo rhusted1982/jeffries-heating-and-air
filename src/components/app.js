@@ -8,7 +8,7 @@ const App = (props) => {
     const email = "hvacguy88@gmail.com";
     const facebook = "http://www.facebook.com/jeffriesheating/";
     let UseFooter = <Footer phoneNumber={phoneNumber} />;
-    if(props.location.pathname === '/contact')
+    if(props.location.pathname === '/contact' || props.location.pathname === '/service')
         UseFooter = null;
     const children = React.Children.map(props.children,
         child => {

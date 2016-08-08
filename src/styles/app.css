@@ -55,10 +55,18 @@ div.footer {
 
 div.footer a {
     width: 100%;
-    margin: 0 0 5px 0;
+    margin-bottom: 5px;
 }
 
-div.footer i {
+div.service a {
+    width: 100%;
+}
+
+div.serviceDetail button {
+    width: 100%;
+}
+
+i {
     padding-top: 3px;
 }
 
@@ -150,6 +158,7 @@ div.deal img {
 div.workingPage {
     text-align: center;
 }
+
 
 div.workingPage i {
     font-size: 10em;
