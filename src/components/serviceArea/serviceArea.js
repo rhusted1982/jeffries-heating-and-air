@@ -13,7 +13,7 @@ class ServiceArea extends React.Component
     }
     onGeolocateClick() {
         navigator.geolocation.getCurrentPosition(function (position) {
-            $.post(`/geocode/${position.coords.latitude}/${position.coords.longitude}`);
+            $.post(`/geocode?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`);
         });
     }
 
