@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Review from './review.presentation';
 import Title from './../title/title.presentation';
-import Data from './review.data';
 
-const ReviewsPresentation = () => {
+const ReviewsListPresentation = (props) => {
     let left = true;
     let reviews = [];
-    Data.reviews.forEach(element => {
+    props.reviews.forEach(element => {
         const name = element.name ? element.name : 'Anonymous';
         const side = left ? 'left' : 'right';
         left = !left;
@@ -20,4 +19,8 @@ const ReviewsPresentation = () => {
     );
 };
 
-export default ReviewsPresentation;
+ReviewsListPresentation.propTypes = {
+    reviews: PropTypes.array.isRequired
+};
+
+export default ReviewsListPresentation;
