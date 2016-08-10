@@ -6,7 +6,7 @@ const ServicePresentation = (props) => {
     props.services.forEach(element => {
         services.push(<li><h5>{element}</h5></li>);
     });
-    let GeolocateButton = <button className="btn btn-primary" onClick={props.onGeolocateClick}><i className="fa fa-map-marker pull-left" aria-hidden="true"></i>Use Current Location</button>;
+    let GeolocateButton = <button className="btn btn-primary" onClick={props.onGeolocateClick}><i className="fa fa-map-marker pull-left" aria-hidden="true"></i>Check Current Location</button>;
     if(!props.canGeolocate) {
         GeolocateButton = <button className="btn btn-primary disabled" disabled><i className="fa fa-map-marker pull-left" aria-hidden="true"></i>Geolocating not supported</button>;
     }
@@ -19,7 +19,8 @@ const ServicePresentation = (props) => {
             </ul>
             <br />
             <p>We are a locally owned and operated from Somerset and proudly serve south central Kentucky.</p>
-            <p>Check to see if you are in our service area</p>
+            <br />
+            <h4>Check to see if you are in our service area!</h4>
             {GeolocateButton}
         </div>
     );

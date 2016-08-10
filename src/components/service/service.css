@@ -10,3 +10,7 @@ div.service ul {
     list-style: none;
     padding:0;
 }
+
+div.service h4 {
+    text-align: center;
+}

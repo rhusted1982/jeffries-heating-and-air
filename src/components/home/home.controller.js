@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Home from './home.presentation';
 import Working from './../working/working.presentation';
 
 class HomeController extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             working: false
         };
@@ -17,12 +17,16 @@ class HomeController extends React.Component {
     }
 
     render() {
-        let content = <Home setWorking={this.setWorking} />;
+        let content = <Home setWorking={this.setWorking} phoneNumber={this.props.phoneNumber} />;
         if(this.state.working === true) {
             content = <Working label="checking location"/>;
         }
         return (content);
     }
 }
+
+HomeController.propTypes = {
+    phoneNumber: PropTypes.string.isRequired
+};
 
 export default HomeController;

@@ -25,6 +25,20 @@ i {
     opacity: 1;
 }
 
+div.footer {
+    width:100%;
+}
+
+div.footer a {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+div.footer button {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
 
 
 

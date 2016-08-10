@@ -14,6 +14,7 @@ const ContactPresentation = (props) => {
             <label className="control-label">Please specify atleast one:</label>
             <TextInput type="email" name="email" label="Your Email" value={props.info.email} onChange={props.onChange} error={props.errors.email} />
             <TextInput type="tel" name="phoneNumber" label="Your Phone Number" value={props.info.phoneNumber} onChange={props.onChange} error={props.errors.phoneNumber}/>
+            <hr />
             <div className="footer">
                 <button className="btn btn-primary" onClick={props.onSubmit}><i className="fa fa-envelope-o pull-left text-center" aria-hidden="true"></i>Send Message</button>
                 <Link to="/" className="btn btn-primary"><i className="fa fa-times pull-left" aria-hidden="true"></i>Cancel</Link>

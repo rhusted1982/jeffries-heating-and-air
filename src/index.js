@@ -9,7 +9,6 @@ import './../node_modules/toastr/build/toastr.min.css';
 import './components/app.css';
 import './components/contact/contact.css';
 import './components/deal/deal.css';
-import './components/footer/footer.css';
 import './components/header/header.css';
 import './components/home/home.css';
 import './components/review/review.css';
