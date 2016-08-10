@@ -32,11 +32,9 @@ export default {
         ]
     },
     plugins : [
-        //new webpack.optimize.OccurenceOrderPlugin(),
-
+        new webpack.optimize.OccurenceOrderPlugin(),
         new ExtractTextPlugin('app.css', {allChunks: true}),
         new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin({minimize: true}),
         new webpack.DefinePlugin({
                 'process.env': {
                     'NODE_ENV': JSON.stringify('production')
