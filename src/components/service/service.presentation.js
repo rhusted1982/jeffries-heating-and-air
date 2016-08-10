@@ -19,6 +19,7 @@ const ServicePresentation = (props) => {
             </ul>
             <br />
             <p>We are a locally owned and operated from Somerset and proudly serve south central Kentucky.</p>
+            <p>We are open <strong>24 HOURS A DAY</strong> and <strong>7 DAYS A WEEK</strong>.</p>
             <br />
             <h4>Check to see if you are in our service area!</h4>
             {GeolocateButton}

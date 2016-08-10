@@ -9,8 +9,8 @@ const App = (props) => {
     const children = React.Children.map(props.children,
         child => {
             switch(child.type.name) {
-                case 'Home':
-                case 'Contact':
+                case 'HomeController':
+                case 'ContactController':
                     return React.cloneElement(child, {phoneNumber: phoneNumber});
                 default:
                     return child;
