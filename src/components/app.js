@@ -12,6 +12,8 @@ const App = (props) => {
                 case 'HomeController':
                 case 'ContactController':
                     return React.cloneElement(child, {phoneNumber: phoneNumber});
+                case 'ReviewController':
+                    return React.cloneElement(child, {layout: 'horizontal'});
                 default:
                     return child;
             }

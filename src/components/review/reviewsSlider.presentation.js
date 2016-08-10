@@ -1,8 +1,9 @@
 import React, {PropTypes} from 'react';
+import Slider from 'react-slick';
 import Review from './review.presentation';
 import Title from './../title/title.presentation';
 
-const ReviewsCarouselPresentation = (props) => {
+const ReviewsSliderPresentation = (props) => {
     let reviews = [];
     let itemClassName = "item active";
     props.reviews.forEach(element => {
@@ -16,17 +17,15 @@ const ReviewsCarouselPresentation = (props) => {
     return (
         <div className="reviews">
             <Title title="reviews" />
-            <div className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner" role="listbox">
-                    {reviews}
-                </div>
-            </div>
+            <Slider>
+                {reviews}
+            </Slider>
         </div>
     );
 };
 
-ReviewsCarouselPresentation.propTypes = {
+ReviewsSliderPresentation.propTypes = {
     reviews: PropTypes.array.isRequired
 };
 
-export default ReviewsCarouselPresentation;
+export default ReviewsSliderPresentation;

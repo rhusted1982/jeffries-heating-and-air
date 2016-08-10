@@ -43,6 +43,7 @@
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-router": "^2.6.1",
+    "react-slick": "^0.12.3",
     "request": "^2.74.0",
     "toastr": "^2.1.2",
     "validator": "^5.5.0",

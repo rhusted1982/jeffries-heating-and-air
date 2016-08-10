@@ -12,7 +12,9 @@ const HomePresentation = (props) => {
                 <hr />
                 <Service setWorking={props.setWorking} />
                 <hr />
-                <Reviews />
+                <Reviews count="3" />
+                <br />
+                <Link to="/review" className="btn btn-primary"><i className="fa fa-star pull-left" aria-hidden="true"></i>See More Reviews</Link>
                 <hr />
                 <div className="footer">
                     <a className="btn btn-primary" href={'tel:'+ props.phoneNumber}><i className="fa fa-phone pull-left" aria-hidden="true"></i>Call Us</a>

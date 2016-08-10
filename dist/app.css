@@ -693,6 +693,8 @@ div.header hr {
 div.header img.brand {
     height: auto;
     margin: 0 auto;
+}div.home a {
+    width: 100%;
 }div.review p.speech-bubble {
     padding: 5%;
     font-family: Arial, Helvetica, SansSerif;

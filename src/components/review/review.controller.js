@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import Data from './review.data';
 import ReviewsList from './reviewsList.presentation';
-import ReviewsCarousel from './reviewsCarousel.presentation';
+import ReviewsSlider from './reviewsSlider.presentation';
 
 class ReviewController extends React.Component {
 
@@ -32,7 +32,7 @@ class ReviewController extends React.Component {
         const reviews = this.getReviewData(this.props.count);
         let content = <ReviewsList reviews={reviews} />;
         if(layout === 'horizontal') {
-            content = <ReviewsCarousel reviews={reviews}/>;
+            content = <ReviewsSlider reviews={reviews}/>;
         }
         return (content);
     }
