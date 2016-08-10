@@ -5,19 +5,20 @@ import Title from './../title/title.presentation';
 
 const ReviewsSliderPresentation = (props) => {
     let reviews = [];
-    let itemClassName = "item active";
     props.reviews.forEach(element => {
         const name = element.name ? element.name : 'Anonymous';
-        reviews.push((
-            <div className={itemClassName}>
-                <Review comment={element.comment} name={name} />
-            </div>));
-        itemClassName = 'item';
+        reviews.push(<div><Review comment={element.comment} name={name} /></div>);
     });
+    let settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
     return (
         <div className="reviews">
             <Title title="reviews" />
-            <Slider>
+            <Slider {...settings}>
                 {reviews}
             </Slider>
         </div>

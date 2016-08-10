@@ -45,6 +45,7 @@
     "react-router": "^2.6.1",
     "react-slick": "^0.12.3",
     "request": "^2.74.0",
+    "slick-carousel": "^1.6.0",
     "toastr": "^2.1.2",
     "validator": "^5.5.0",
     "webpack": "^1.13.1"
