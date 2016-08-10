@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const HeaderPage = (props) => {
+const HeaderPresentation = (props) => {
     return (
         <div className="header">
             <div className="row">
@@ -32,11 +32,11 @@ const HeaderPage = (props) => {
     );
 };
 
-HeaderPage.propTypes = {
+HeaderPresentation.propTypes = {
     phoneNumber: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     facebook: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired
 };
 
-export default HeaderPage;
+export default HeaderPresentation;

@@ -1,8 +1,8 @@
 import React from 'react';
-import HomePage from './homePage';
-import WorkingPage from './../working/workingPage';
+import Home from './home.presentation';
+import Working from './../working/working.presentation';
 
-class Home extends React.Component {
+class HomeController extends React.Component {
 
     constructor() {
         super();
@@ -17,12 +17,12 @@ class Home extends React.Component {
     }
 
     render() {
-        let content = <HomePage setWorking={this.setWorking} />;
+        let content = <Home setWorking={this.setWorking} />;
         if(this.state.working === true) {
-            content = <WorkingPage label="checking location"/>;
+            content = <Working label="checking location"/>;
         }
         return (content);
     }
 }
 
-export default Home;
+export default HomeController;

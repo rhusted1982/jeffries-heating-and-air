@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const TitlePage = (props) => {
+const TitlePresentation = (props) => {
     return (
         <div className="title">
             <h3>{props.title.toLocaleUpperCase()}</h3>
@@ -8,8 +8,8 @@ const TitlePage = (props) => {
     );
 };
 
-TitlePage.propTypes = {
+TitlePresentation.propTypes = {
     title: PropTypes.string.isRequired
 };
 
-export default TitlePage;
+export default TitlePresentation;

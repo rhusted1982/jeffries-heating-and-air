@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
-import AboutPage from '../about/aboutPage';
-import Service from '../service/service';
+import About from './../about/about.presentation';
+import Service from './../service/service.controller';
 
-const HomePage = (props) => {
+const HomePresentation = (props) => {
     return (
         <div className="home">
             <div>
-                <AboutPage />
+                <About />
                 <hr />
                 <Service setWorking={props.setWorking} />
             </div>
@@ -14,8 +14,8 @@ const HomePage = (props) => {
     );
 };
 
-HomePage.propTypes = {
+HomePresentation.propTypes = {
     setWorking: PropTypes.func.isRequired
 };
 
-export default HomePage;
+export default HomePresentation;

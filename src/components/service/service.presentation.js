@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
-import TitlePage from './../title/titlePage';
+import Title from './../title/title.presentation';
 
-const ServicePage = (props) => {
+const ServicePresentation = (props) => {
     let services = [];
     props.services.forEach(element => {
         services.push(<li><h5>{element}</h5></li>);
@@ -12,7 +12,7 @@ const ServicePage = (props) => {
     }
     return (
         <div className="service">
-            <TitlePage title="services"/>
+            <Title title="services"/>
             <p>We offer a range of services including but not limited to:</p>
             <ul>
                 {services}
@@ -25,10 +25,10 @@ const ServicePage = (props) => {
     );
 };
 
-ServicePage.propTypes = {
+ServicePresentation.propTypes = {
     services: PropTypes.array.isRequired,
     canGeolocate: PropTypes.bool.isRequired,
     onGeolocateClick: PropTypes.func.isRequired
 };
 
-export default ServicePage;
+export default ServicePresentation;

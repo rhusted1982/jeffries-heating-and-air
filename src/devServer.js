@@ -2,8 +2,8 @@ import webpack from 'webpack';
 import webpackDevMiddleWare from 'webpack-dev-middleware';
 import path from 'path';
 import config from './../webpack.config.dev';
-const email = require('./api/email');
-const geocode = require('./api/geocode');
+const email = require('./api/email/email.express');
+const geocode = require('./api/geocode/geocode.express');
 const server = require('./server');
 
 const compiler = webpack(config);

@@ -2,13 +2,13 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import TextInput from './../common/textInput';
 import SelectInput from './../common/selectInput';
-import TitlePage from './../title/titlePage';
+import Title from './../title/title.presentation';
 
-const ContactPage = (props) => {
+const ContactPresentation = (props) => {
 
     return (
         <div className="contact">
-            <TitlePage title="Contact Us" />
+            <Title title="Contact Us" />
             <TextInput name="name" label="Your Name" value={props.info.name} onChange={props.onChange} error={props.errors.name} />
             <SelectInput name="reason" label="Reason for Contacting" value={props.info.reason} onChange={props.onChange} error={props.errors.reason} options={props.reasons} />
             <label className="control-label">Please specify atleast one:</label>
@@ -23,7 +23,7 @@ const ContactPage = (props) => {
     );
 };
 
-ContactPage.propTypes = {
+ContactPresentation.propTypes = {
     info: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired,
@@ -32,4 +32,4 @@ ContactPage.propTypes = {
     reasons: PropTypes.array.isRequired
 };
 
-export default ContactPage;
+export default ContactPresentation;

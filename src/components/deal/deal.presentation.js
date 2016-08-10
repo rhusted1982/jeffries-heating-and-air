@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const Deal = (props) => {
+const DealPresentation = (props) => {
     return (
         <div className="deal">
             <img className="img-responsive img-rounded" src={require('./../../images/'+props.image)} />
@@ -8,8 +8,8 @@ const Deal = (props) => {
     );
 };
 
-Deal.propTypes = {
+DealPresentation.propTypes = {
     image: PropTypes.string.isRequired
 };
 
-export default Deal;
+export default DealPresentation;

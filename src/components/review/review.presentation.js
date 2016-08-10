@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const Review = (props) => {
+const ReviewPresentation = (props) => {
     return (
         <div className="review">
             <div className={props.side}>
@@ -21,10 +21,10 @@ const Review = (props) => {
     );
 };
 
-Review.propTypes = {
+ReviewPresentation.propTypes = {
     comment: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     side: PropTypes.string.isRequired
 };
 
-export default Review;
+export default ReviewPresentation;

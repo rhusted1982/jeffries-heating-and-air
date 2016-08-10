@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const WorkingPage = (props) => {
+const WorkingPresentation = (props) => {
     return (
         <div className="working">
             <br />
@@ -10,8 +10,8 @@ const WorkingPage = (props) => {
     );
 };
 
-WorkingPage.propTypes = {
+WorkingPresentation.propTypes = {
     label: PropTypes.string.isRequired
 };
 
-export default WorkingPage;
+export default WorkingPresentation;

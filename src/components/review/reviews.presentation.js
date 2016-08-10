@@ -1,12 +1,12 @@
 import React from 'react';
-import Review from './review';
-import TitlePage from './../title/titlePage';
-import ReviewData from '../../data/review';
+import Review from './review.presentation';
+import Title from './../title/title.presentation';
+import Data from './review.data';
 
-const Reviews = () => {
+const ReviewsPresentation = () => {
     let left = true;
     let reviews = [];
-    ReviewData.forEach(element => {
+    Data.reviews.forEach(element => {
         const name = element.name ? element.name : 'Anonymous';
         const side = left ? 'left' : 'right';
         left = !left;
@@ -14,10 +14,10 @@ const Reviews = () => {
     });
     return (
         <div className="reviews">
-            <TitlePage title="reviews" />
+            <Title title="reviews" />
             {reviews}
         </div>
     );
 };
 
-export default Reviews;
+export default ReviewsPresentation;

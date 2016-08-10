@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
-import ServicePage from './servicePage';
-import ServiceData from './../../data/service';
+import Service from './service.presentation';
+import Data from './service.data';
 import toastr from 'toastr';
 import $ from 'jquery';
 
-class Service extends React.Component {
+class ServiceController extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -51,12 +51,12 @@ class Service extends React.Component {
     }
 
     render() {
-        return (<ServicePage services={ServiceData} canGeolocate={this.state.canGeolocate} onGeolocateClick={this.geolocateClick}/>);
+        return (<Service services={Data.services} canGeolocate={this.state.canGeolocate} onGeolocateClick={this.geolocateClick}/>);
     }
 }
 
-Service.propTypes = {
+ServiceController.propTypes = {
     setWorking: PropTypes.func.isRequired
 };
 
-export default Service;
+export default ServiceController;

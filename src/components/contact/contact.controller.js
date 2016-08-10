@@ -1,13 +1,13 @@
 import React, {PropTypes} from 'react';
 import {browserHistory} from 'react-router';
-import ContactPage from './contactPage';
+import Contact from './contact.presentation';
 import $ from 'jquery';
 import toastr from 'toastr';
-import WorkingPage from './../working/workingPage';
+import Working from './../working/working.presentation';
 import validator from 'validator';
-import ReasonData from './../../data/reason';
+import Data from './contact.data';
 
-class Contact extends React.Component {
+class ContactController extends React.Component {
 
     constructor(props) {
         super(props);
@@ -100,22 +100,22 @@ class Contact extends React.Component {
     }
 
     render() {
-        let content = (<ContactPage info={this.state.info}
+        let content = (<Contact info={this.state.info}
                                    errors={this.state.errors}
                                    onChange={this.changeInfo}
                                    phoneNumber={this.props.phoneNumber}
                                    onSubmit={this.sendInfo}
-                                   reasons={ReasonData}/>);
+                                   reasons={Data.reasons}/>);
         if(this.state.working) {
-            content = (<WorkingPage label="Sending Message"
+            content = (<Working label="Sending Message"
                                     className="contact"/>);
         }
         return (content);
     }
 }
 
-Contact.propTypes = {
+ContactController.propTypes = {
     phoneNumber: PropTypes.string.isRequired
 };
 
-export default Contact;
+export default ContactController;
