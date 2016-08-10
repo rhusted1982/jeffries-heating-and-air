@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import TitleDiv from './../common/titleDiv';
+import TitlePage from './../title/titlePage';
 
 const ServicePage = (props) => {
     let services = [];
@@ -12,7 +12,7 @@ const ServicePage = (props) => {
     }
     return (
         <div className="service">
-            <TitleDiv title="services"/>
+            <TitlePage title="services"/>
             <p>We offer a range of services including but not limited to:</p>
             <ul>
                 {services}

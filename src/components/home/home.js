@@ -1,6 +1,6 @@
 import React from 'react';
 import HomePage from './homePage';
-import WorkingPage from './../common/workingPage';
+import WorkingPage from './../working/workingPage';
 
 class Home extends React.Component {
 

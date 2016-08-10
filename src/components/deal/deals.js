@@ -1,5 +1,5 @@
 import React from 'react';
-import TitleDiv from './../common/titleDiv';
+import TitlePage from './../title/titlePage';
 import DealData from '../../data/deal';
 import Deal from './deal';
 
@@ -10,7 +10,7 @@ const Deals = () => {
     });
     return (
         <div className="deals">
-            <TitleDiv title="deals"/>
+            <TitlePage title="deals"/>
             {deals}
         </div>
     );

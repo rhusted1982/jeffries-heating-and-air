@@ -11,11 +11,11 @@ const HomePage = (props) => {
                 <Service setWorking={props.setWorking} />
             </div>
         </div>
-    )
-}
+    );
+};
 
 HomePage.propTypes = {
     setWorking: PropTypes.func.isRequired
-}
+};
 
 export default HomePage;

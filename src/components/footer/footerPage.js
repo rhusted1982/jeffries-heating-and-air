@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
-const Footer = (props) => {
+const FooterPage = (props) => {
     return (
         <div className="footer">
             <a className="btn btn-primary" href={'tel:'+ props.phoneNumber}><i className="fa fa-phone pull-left" aria-hidden="true"></i>Call Us</a>
@@ -10,8 +10,8 @@ const Footer = (props) => {
     );
 };
 
-Footer.propTypes = {
+FooterPage.propTypes = {
     phoneNumber: PropTypes.string.isRequired,
 };
 
-export default Footer;
+export default FooterPage;

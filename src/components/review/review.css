@@ -1,0 +1,38 @@
+div.review p.speech-bubble {
+    padding: 5%;
+    font-family: Arial, Helvetica, SansSerif;
+    font-style: italic;
+    text-align: center;
+    border: 2px solid #337ab7;
+    background-color: white;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 2px 4px #888;
+    -moz-box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #888;
+}
+
+div.review span.speech-arrow {
+    width: 0;
+    height: 0;
+    border: 13px solid;
+    border-color: #337ab7 transparent transparent transparent;
+}
+
+div.review p.name {
+    font-family: Arial, Helvetica, SansSerif;
+    font-weight: bold;
+    vertical-align: middle;
+    padding-top: 5%;
+}
+
+div.review div.left {
+    width:100%;
+    padding-right: 25%;
+}
+
+div.review div.right {
+    width:100%;
+    padding-left: 25%;
+}

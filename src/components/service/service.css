@@ -1,0 +1,12 @@
+div.service a {
+    width: 100%;
+}
+
+div.service button {
+    width: 100%;
+}
+
+div.service ul {
+    list-style: none;
+    padding:0;
+}

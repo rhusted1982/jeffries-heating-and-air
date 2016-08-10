@@ -2,13 +2,13 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import TextInput from './../common/textInput';
 import SelectInput from './../common/selectInput';
-import TitleDiv from './../common/titleDiv';
+import TitlePage from './../title/titlePage';
 
 const ContactPage = (props) => {
 
     return (
         <div className="contact">
-            <TitleDiv title="Contact Us" />
+            <TitlePage title="Contact Us" />
             <TextInput name="name" label="Your Name" value={props.info.name} onChange={props.onChange} error={props.errors.name} />
             <SelectInput name="reason" label="Reason for Contacting" value={props.info.reason} onChange={props.onChange} error={props.errors.reason} options={props.reasons} />
             <label className="control-label">Please specify atleast one:</label>

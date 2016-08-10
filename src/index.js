@@ -6,7 +6,16 @@ import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './../node_modules/bootstrap/dist/css/bootstrap-theme.css';
 import './../node_modules/font-awesome/css/font-awesome.min.css';
 import './../node_modules/toastr/build/toastr.min.css';
-import './styles/app.css';
+import './components/app.css';
+import './components/contact/contact.css';
+import './components/deal/deal.css';
+import './components/footer/footer.css';
+import './components/header/header.css';
+import './components/home/home.css';
+import './components/review/review.css';
+import './components/service/service.css';
+import './components/title/title.css';
+import './components/working/working.css';
 
 render(
     <Router history={browserHistory} routes={routes} />,

@@ -1,0 +1,8 @@
+div.working {
+    text-align: center;
+}
+
+div.working i {
+    font-size: 10em;
+    color: #337ab7;
+}

@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const Header = (props) => {
+const HeaderPage = (props) => {
     return (
         <div className="header">
             <div className="row">
@@ -23,7 +23,7 @@ const Header = (props) => {
                 <hr />
             </div>
             <div className="row">
-                <img className="brand img-responsive" src={props.brandImage}></img>
+                <img className="brand img-responsive" src={props.image}></img>
             </div>
             <div className="row">
                 <hr />
@@ -32,11 +32,11 @@ const Header = (props) => {
     );
 };
 
-Header.propTypes = {
+HeaderPage.propTypes = {
     phoneNumber: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     facebook: PropTypes.string.isRequired,
-    brandImage: PropTypes.string.isRequired
+    image: PropTypes.string.isRequired
 };
 
-export default Header;
+export default HeaderPage;

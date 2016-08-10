@@ -1,6 +1,6 @@
 import React from 'react';
 import Review from './review';
-import TitleDiv from './../common/titleDiv';
+import TitlePage from './../title/titlePage';
 import ReviewData from '../../data/review';
 
 const Reviews = () => {
@@ -14,7 +14,7 @@ const Reviews = () => {
     });
     return (
         <div className="reviews">
-            <TitleDiv title="reviews" />
+            <TitlePage title="reviews" />
             {reviews}
         </div>
     );

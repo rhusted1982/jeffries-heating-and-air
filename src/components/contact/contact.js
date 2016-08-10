@@ -3,7 +3,7 @@ import {browserHistory} from 'react-router';
 import ContactPage from './contactPage';
 import $ from 'jquery';
 import toastr from 'toastr';
-import WorkingPage from './../common/workingPage';
+import WorkingPage from './../working/workingPage';
 import validator from 'validator';
 import ReasonData from './../../data/reason';
 

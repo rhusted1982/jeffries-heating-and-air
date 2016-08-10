@@ -1,0 +1,33 @@
+div.header {
+    font-weight: bold;
+}
+
+div.header span.contact-info {
+    position: relative;
+    margin: 0 auto;
+}
+
+div.header span.caption {
+    color:#337ab7;
+}
+
+div.header div.centered-button {
+    padding-top:5px;
+    padding-bottom:15px;
+}
+
+div.header div.centered-text {
+    padding-top:10px;
+    padding-bottom:15px;
+}
+
+div.header hr {
+    border:none;
+    height: 1px;
+    margin: 0;
+}
+
+div.header img.brand {
+    height: auto;
+    margin: 0 auto;
+}

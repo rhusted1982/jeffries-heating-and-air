@@ -1,0 +1,45 @@
+body {
+    padding-top: 10px;
+    font-family: Arial, Helvetica, SansSerif;
+    background-color:#F2F2F2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #337ab7;
+}
+
+hr {
+    background-color:#337ab7;
+    height: 1px;
+}
+
+i {
+    padding-top: 3px;
+}
+
+.toast-success {
+    background-color: #337ab7;
+}
+
+#toast-container > div {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
