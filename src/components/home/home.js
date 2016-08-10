@@ -1,21 +1,28 @@
 import React from 'react';
-import About from './../about/about';
-import Service from './../service/service';
-import Deals from './../deal/deals';
-import Reviews from './../review/reviews';
+import HomePage from './homePage';
+import WorkingPage from './../common/workingPage';
 
-const Home = () => {
-    return (
-        <div className="home">
-            <About />
-            <hr />
-            <Service />
-            <hr />
-            <Deals />
-            <hr />
-            <Reviews />
-        </div>
-    );
-};
+class Home extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            working: false
+        };
+        this.setWorking = this.setWorking.bind(this);
+    }
+
+    setWorking(value) {
+        this.setState({working: value});
+    }
+
+    render() {
+        let content = <HomePage setWorking={this.setWorking} />;
+        if(this.state.working === true) {
+            content = <WorkingPage label="checking location"/>;
+        }
+        return (content);
+    }
+}
 
 export default Home;

@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 const WorkingPage = (props) => {
     return (
-        <div className="workingPage">
+        <div className="working">
             <br />
             <i className="fa fa-spinner fa-spin" aria-hidden="true"></i>
             <h4>{props.label.toUpperCase()}</h4>

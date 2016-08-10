@@ -1,7 +1,7 @@
 import React from 'react';
 import TitleDiv from './../common/titleDiv';
 
-const About = () => {
+const AboutPage = () => {
     return (
         <div className="about">
             <TitleDiv title="our mission"/>
@@ -12,4 +12,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default AboutPage;

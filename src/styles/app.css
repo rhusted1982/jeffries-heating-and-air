@@ -62,7 +62,7 @@ div.service a {
     width: 100%;
 }
 
-div.serviceDetail button {
+div.service button {
     width: 100%;
 }
 
@@ -137,11 +137,6 @@ div.contact {
     padding-bottom: 150px;
 }
 
-div.service img.img-24-7 {
-    width:auto;
-    height:auto;
-}
-
 div.deal img {
     width:100%;
     height:auto;
@@ -155,12 +150,12 @@ div.deal img {
     opacity: 1;
 }
 
-div.workingPage {
+div.working {
     text-align: center;
 }
 
 
-div.workingPage i {
+div.working i {
     font-size: 10em;
     color: #337ab7;
 }

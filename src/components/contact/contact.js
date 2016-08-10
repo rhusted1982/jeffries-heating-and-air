@@ -5,6 +5,7 @@ import $ from 'jquery';
 import toastr from 'toastr';
 import WorkingPage from './../common/workingPage';
 import validator from 'validator';
+import ReasonData from './../../data/reason';
 
 class Contact extends React.Component {
 
@@ -99,15 +100,17 @@ class Contact extends React.Component {
     }
 
     render() {
-        let content = <ContactPage info={this.state.info} errors={this.state.errors} onChange={this.changeInfo} phoneNumber={this.props.phoneNumber} onSubmit={this.sendInfo} />;
+        let content = (<ContactPage info={this.state.info}
+                                   errors={this.state.errors}
+                                   onChange={this.changeInfo}
+                                   phoneNumber={this.props.phoneNumber}
+                                   onSubmit={this.sendInfo}
+                                   reasons={ReasonData}/>);
         if(this.state.working) {
-            content = <WorkingPage label="Sending Message"/>;
+            content = (<WorkingPage label="Sending Message"
+                                    className="contact"/>);
         }
-        return (
-          <div className="contact">
-              {content}
-          </div>
-        );
+        return (content);
     }
 }
 
