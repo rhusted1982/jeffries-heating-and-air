@@ -1012,6 +1012,7 @@ div.header hr {
 }
 
 div.header img.brand {
+    width: 100%;
     height: auto;
     margin: 0 auto;
 }div.home a {
