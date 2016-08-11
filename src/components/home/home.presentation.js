@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import About from './../about/about.presentation';
 import Service from './../service/service.controller';
-import Reviews from '../review/review.controller';
+import Reviews from './../review/review.controller';
 
 const HomePresentation = (props) => {
     return (

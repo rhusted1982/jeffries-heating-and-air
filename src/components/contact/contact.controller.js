@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import {browserHistory} from 'react-router';
 import Contact from './contact.presentation';
 import $ from 'jquery';
@@ -103,7 +103,7 @@ class ContactController extends React.Component {
         let content = (<Contact info={this.state.info}
                                    errors={this.state.errors}
                                    onChange={this.changeInfo}
-                                   phoneNumber={this.props.phoneNumber}
+                                   phoneNumber={process.env.PhoneNumber}
                                    onSubmit={this.sendInfo}
                                    reasons={Data.reasons}/>);
         if(this.state.working) {
@@ -113,9 +113,5 @@ class ContactController extends React.Component {
         return (content);
     }
 }
-
-ContactController.propTypes = {
-    phoneNumber: PropTypes.string.isRequired
-};
 
 export default ContactController;

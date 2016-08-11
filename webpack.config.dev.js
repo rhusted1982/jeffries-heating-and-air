@@ -1,3 +1,4 @@
+import webpack from 'webpack';
 import path from 'path';
 
 export default {
@@ -27,5 +28,15 @@ export default {
             {test: /\.gif$/, loader: "url-loader?25000"},
             {test:  /\.json$/, loader: 'json-loader' }
         ]
-    }
+    },
+    plugins : [
+        new webpack.DefinePlugin({
+                'process.env': {
+                    'NODE_ENV': JSON.stringify('development'),
+                    'PhoneNumber': JSON.stringify('12567240063'),
+                    'Email': JSON.stringify('richard.husted@gmail.com'),
+                    'Facebook': JSON.stringify('https://www.facebook.com/richard.husted')
+                }
+            })
+    ]
 };

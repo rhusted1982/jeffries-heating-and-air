@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
 import Home from './home.presentation';
 import Working from './../working/working.presentation';
 
@@ -17,16 +17,12 @@ class HomeController extends React.Component {
     }
 
     render() {
-        let content = <Home setWorking={this.setWorking} phoneNumber={this.props.phoneNumber} />;
+        let content = <Home setWorking={this.setWorking} phoneNumber={process.env.PhoneNumber} />;
         if(this.state.working === true) {
             content = <Working label="checking location"/>;
         }
         return (content);
     }
 }
-
-HomeController.propTypes = {
-    phoneNumber: PropTypes.string.isRequired
-};
 
 export default HomeController;

@@ -28,10 +28,10 @@ class ReviewController extends React.Component {
     }
 
     render() {
-        const layout = this.props.layout || 'vertical';
+        const present = this.props.present || 'list';
         const reviews = this.getReviewData(this.props.count);
         let content = <ReviewsList reviews={reviews} />;
-        if(layout === 'horizontal') {
+        if(present === 'slider') {
             content = <ReviewsSlider reviews={reviews}/>;
         }
         return (content);
@@ -39,7 +39,7 @@ class ReviewController extends React.Component {
 }
 
 ReviewController.propTypes = {
-    layout: PropTypes.string,
+    present: PropTypes.string,
     count: PropTypes.string
 };
 
