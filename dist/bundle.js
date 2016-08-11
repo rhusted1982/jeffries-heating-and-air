@@ -27256,7 +27256,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	(0, _reactDom.render)(_react2.default.createElement(_reactRouter.Router, { history: _reactRouter.browserHistory, routes: _routes2.default }), document.getElementById('app'));
+	(0, _reactDom.render)(_react2.default.createElement(_reactRouter.Router, { history: _reactRouter.browserHistory, routes: _routes2.default, onUpdate: function onUpdate() {
+	        return window.scrollTo(0, 0);
+	    } }), document.getElementById('app'));
 
 /***/ },
 /* 178 */

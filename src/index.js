@@ -18,6 +18,6 @@ import './components/title/title.css';
 import './components/working/working.css';
 
 render(
-    <Router history={browserHistory} routes={routes} />,
+    <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0,0)} />,
     document.getElementById('app')
 );
