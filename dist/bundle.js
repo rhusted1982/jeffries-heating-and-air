@@ -26093,9 +26093,9 @@
 	    _createClass(HeaderController, [{
 	        key: 'render',
 	        value: function render() {
-	            var phoneNumber = '(' + ({"NODE_ENV":"production"}).PhoneNumber.substring(1, 4) + ') ' + ({"NODE_ENV":"production"}).PhoneNumber.substring(4, 7) + '-' + ({"NODE_ENV":"production"}).PhoneNumber.substring(7);
+	            //const phoneNumber = `(${process.env.PhoneNumber.substring(1,4)}) ${process.env.PhoneNumber.substring(4,7)}-${process.env.PhoneNumber.substring(7)}`;
 	            return _react2.default.createElement(_header2.default, {
-	                phoneNumber: phoneNumber,
+	                phoneNumber: ({"NODE_ENV":"production"}).PhoneNumber,
 	                email: ({"NODE_ENV":"production"}).Email,
 	                facebook: ({"NODE_ENV":"production"}).Facebook,
 	                image: __webpack_require__(301) });
