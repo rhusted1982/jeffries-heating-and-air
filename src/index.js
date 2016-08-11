@@ -17,6 +17,8 @@ import './components/service/service.css';
 import './components/title/title.css';
 import './components/working/working.css';
 
+/*eslint-disable react/jsx-no-bind */
+
 render(
     <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0,0)} />,
     document.getElementById('app')

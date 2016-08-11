@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import About from './../about/about.presentation';
 import Service from './../service/service.controller';
-import Deal from './../deal/deal.presentation';
 import Review from './../review/review.presentation';
 
 const HomePresentation = (props) => {
@@ -12,8 +11,6 @@ const HomePresentation = (props) => {
                 <About />
                 <hr />
                 <Service setWorking={props.setWorking} />
-                <hr />
-                <Deal />
                 <hr />
                 <Review size="3" />
                 <hr />
