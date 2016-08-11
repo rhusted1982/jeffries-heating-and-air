@@ -2,7 +2,8 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import About from './../about/about.presentation';
 import Service from './../service/service.controller';
-import Reviews from './../review/review.controller';
+import Deal from './../deal/deal.presentation';
+import Review from './../review/review.presentation';
 
 const HomePresentation = (props) => {
     return (
@@ -12,9 +13,9 @@ const HomePresentation = (props) => {
                 <hr />
                 <Service setWorking={props.setWorking} />
                 <hr />
-                <Reviews count="3" />
-                <br />
-                <Link to="/review" className="btn btn-primary"><i className="fa fa-star pull-left" aria-hidden="true"></i>See More Reviews</Link>
+                <Deal />
+                <hr />
+                <Review size="3" />
                 <hr />
                 <div className="footer">
                     <a className="btn btn-primary" href={'tel:'+ props.phoneNumber}><i className="fa fa-phone pull-left" aria-hidden="true"></i>Call Us</a>

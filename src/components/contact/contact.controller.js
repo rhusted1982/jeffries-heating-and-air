@@ -1,6 +1,6 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
-import Contact from './contact.presentation';
+import Contact from './contactPage.presentation';
 import $ from 'jquery';
 import toastr from 'toastr';
 import Working from './../working/working.presentation';
@@ -100,10 +100,11 @@ class ContactController extends React.Component {
     }
 
     render() {
+        const phoneNumber = '16063032233';
         let content = (<Contact info={this.state.info}
                                    errors={this.state.errors}
                                    onChange={this.changeInfo}
-                                   phoneNumber={process.env.PhoneNumber}
+                                   phoneNumber={phoneNumber}
                                    onSubmit={this.sendInfo}
                                    reasons={Data.reasons}/>);
         if(this.state.working) {

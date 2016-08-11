@@ -1,28 +1,22 @@
 import React, {PropTypes} from 'react';
+import Title from './../title/title.presentation';
+import Link from './reviewLink.presentation';
+import List from './../review/reviewList.controller';
 
 const ReviewPresentation = (props) => {
     return (
-        <div className={'review'+ (props.side ? ' '+props.side : '')}>
-            <p className="speech-bubble">{props.comment}</p>
-            <div className="row">
-                <div className="col-xs-offset-1 col-xs-1">
-                    <span className="speech-arrow" />
-                </div>
-                <div className="col-xs-2">
-                    <i className="fa fa-user fa-3x" aria-hidden="true"></i>
-                </div>
-                <div className="col-xs-6">
-                    <p className="name">{props.name}</p>
-                </div>
-            </div>
+        <div className="review">
+            <Title title="Reviews" />
+            <br />
+            <List size={props.size} />
+            <br />
+            <Link text="See More Reviews"/>
         </div>
     );
 };
 
 ReviewPresentation.propTypes = {
-    comment: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    side: PropTypes.string
+    size: PropTypes.string
 };
 
 export default ReviewPresentation;

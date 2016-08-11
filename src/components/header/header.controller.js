@@ -4,11 +4,13 @@ import Header from './header.presentation';
 class HeaderController extends React.Component {
 
     render () {
-        //const phoneNumber = `(${process.env.PhoneNumber.substring(1,4)}) ${process.env.PhoneNumber.substring(4,7)}-${process.env.PhoneNumber.substring(7)}`;
+        const phoneNumber = '(606) 303-2233';
+        const email = 'hvacguy88@gmail.com';
+        const facebook = 'https://www.facebook.com/jeffriesheating';
         return(<Header 
-                    phoneNumber={process.env.PhoneNumber} 
-                    email={process.env.Email} 
-                    facebook={process.env.Facebook} 
+                    phoneNumber={phoneNumber} 
+                    email={email} 
+                    facebook={facebook} 
                     image={require('./brand.png')} />
             );
     }

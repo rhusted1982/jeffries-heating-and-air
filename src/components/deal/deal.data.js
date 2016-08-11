@@ -1,7 +1,7 @@
 export default {
     deals: [
         {
-            image: 'tune-up-special.png'
+            image: require('./tune-up-special.png')
         }
     ]
 };

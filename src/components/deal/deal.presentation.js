@@ -1,15 +1,15 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import Title from './../title/title.presentation';
+import Link from './dealLink.presentation';
 
-const DealPresentation = (props) => {
+const DealPresentation = () => {
     return (
         <div className="deal">
-            <img className="img-responsive img-rounded" src={require('./../../images/'+props.image)} />
+            <Title title="Deals" />
+            <br />
+            <Link text="See All Deals"/>
         </div>
     );
-};
-
-DealPresentation.propTypes = {
-    image: PropTypes.string.isRequired
 };
 
 export default DealPresentation;

@@ -17,7 +17,8 @@ class HomeController extends React.Component {
     }
 
     render() {
-        let content = <Home setWorking={this.setWorking} phoneNumber={process.env.PhoneNumber} />;
+        const phoneNumber = '16063032233';
+        let content = <Home setWorking={this.setWorking} phoneNumber={phoneNumber} />;
         if(this.state.working === true) {
             content = <Working label="checking location"/>;
         }
