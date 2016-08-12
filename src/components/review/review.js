@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
-import Title from './../title/title.presentation';
-import Link from './reviewLink.presentation';
-import List from './../review/reviewList.controller';
+import Title from '../title/title';
+import Link from './reviewLink';
+import List from './reviewList';
 
-const ReviewPresentation = (props) => {
+const Review = (props) => {
     return (
         <div className="review">
             <Title title="Reviews" />
@@ -15,8 +15,8 @@ const ReviewPresentation = (props) => {
     );
 };
 
-ReviewPresentation.propTypes = {
+Review.propTypes = {
     size: PropTypes.string
 };
 
-export default ReviewPresentation;
+export default Review;

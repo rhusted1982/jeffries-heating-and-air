@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './header.presentation';
+import Header from './header';
 
-class HeaderController extends React.Component {
+class HeaderContainer extends React.Component {
 
     render () {
         const phoneNumber = '(606) 303-2233';
@@ -16,4 +16,4 @@ class HeaderController extends React.Component {
     }
 }
 
-export default HeaderController;
+export default HeaderContainer;

@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const SelectPresentation = (props) => {
+const Select = (props) => {
     let wrapper = 'form-group';
     if(props.error && props.error.length > 0)
         wrapper += ' has-error';
@@ -23,7 +23,7 @@ const SelectPresentation = (props) => {
     );
 };
 
-SelectPresentation.propTypes = {
+Select.propTypes = {
     name: PropTypes.string.isRequired,
     label: PropTypes.string,
     value: PropTypes.string.isRequired,
@@ -32,4 +32,4 @@ SelectPresentation.propTypes = {
     options: PropTypes.array.isRequired
 };
 
-export default SelectPresentation;
+export default Select;

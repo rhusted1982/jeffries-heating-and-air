@@ -1,9 +1,9 @@
 import React from 'react';
-import SliderController from '../lists/slider.presentation';
+import Slider from '../lists/slider';
 import Data from './review.data';
-import Detail from './reviewDetail.presentation';
+import Detail from './reviewDetail';
 
-class ReviewSliderController extends SliderController {
+class ReviewSlider extends React.Component {
 
     itemRender(review) {
         const name = review.name ? review.name : 'Anonymous';
@@ -13,9 +13,9 @@ class ReviewSliderController extends SliderController {
     }
 
     render() {
-        return (<SliderController
+        return (<Slider
             items={Data.reviews}
-            itemRender={this.itemRender}
+            render={this.itemRender}
             settings={{
                 infinite: true,
                 speed: 500,
@@ -26,4 +26,4 @@ class ReviewSliderController extends SliderController {
     }
 }
 
-export default ReviewSliderController;
+export default ReviewSlider;

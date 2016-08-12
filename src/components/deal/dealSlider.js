@@ -1,9 +1,9 @@
 import React from 'react';
-import SliderController from '../lists/slider.presentation';
+import Slider from '../lists/slider';
 import Data from './deal.data';
-import Detail from './dealDetail.presentation';
+import Detail from './dealDetail';
 
-class DealSliderController extends SliderController {
+class DealSlider extends React.Component {
 
     itemRender(deal) {
         return (<div>
@@ -12,9 +12,9 @@ class DealSliderController extends SliderController {
     }
 
     render() {
-        return (<SliderController
+        return (<Slider
             items={Data.deals}
-            itemRender={this.itemRender}
+            render={this.itemRender}
             settings={{
                 infinite: false,
                 speed: 500,
@@ -25,4 +25,4 @@ class DealSliderController extends SliderController {
     }
 }
 
-export default DealSliderController;
+export default DealSlider;

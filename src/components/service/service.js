@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
-import Title from './../title/title.presentation';
+import Title from '../title/title';
 
-const ServicePresentation = (props) => {
+const Service = (props) => {
     let services = [];
     props.services.forEach(element => {
         services.push(<li><h5>{element}</h5></li>);
@@ -27,10 +27,10 @@ const ServicePresentation = (props) => {
     );
 };
 
-ServicePresentation.propTypes = {
+Service.propTypes = {
     services: PropTypes.array.isRequired,
     canGeolocate: PropTypes.bool.isRequired,
     onGeolocateClick: PropTypes.func.isRequired
 };
 
-export default ServicePresentation;
+export default Service;

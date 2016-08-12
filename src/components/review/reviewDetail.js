@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const ReviewDetailPresentation = (props) => {
+const ReviewDetail = (props) => {
     return (
         <div className={'review'+ (props.side ? ' '+props.side : '')}>
             <p className="speech-bubble">{props.comment}</p>
@@ -19,10 +19,10 @@ const ReviewDetailPresentation = (props) => {
     );
 };
 
-ReviewDetailPresentation.propTypes = {
+ReviewDetail.propTypes = {
     comment: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     side: PropTypes.string
 };
 
-export default ReviewDetailPresentation;
+export default ReviewDetail;

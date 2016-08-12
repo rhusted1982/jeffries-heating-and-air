@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const WorkingPresentation = (props) => {
+const Working = (props) => {
     return (
         <div className="working">
             <br />
@@ -10,8 +10,8 @@ const WorkingPresentation = (props) => {
     );
 };
 
-WorkingPresentation.propTypes = {
+Working.propTypes = {
     label: PropTypes.string.isRequired
 };
 
-export default WorkingPresentation;
+export default Working;

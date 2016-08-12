@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import Header from './header/header.controller';
+import Header from './header/headerContainer';
 
 const App = (props) => {
     const children = React.Children.map(props.children,

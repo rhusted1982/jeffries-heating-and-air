@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
-import TextInput from '../controls/input.presentation';
-import SelectInput from '../controls/select.presentation';
-import Title from './../title/title.presentation';
+import TextInput from '../controls/input';
+import SelectInput from '../controls/select';
+import Title from '../title/title';
 
-const ContactPagePresentation = (props) => {
+const ContactPage = (props) => {
 
     return (
         <div className="contact">
@@ -22,7 +22,7 @@ const ContactPagePresentation = (props) => {
     );
 };
 
-ContactPagePresentation.propTypes = {
+ContactPage.propTypes = {
     info: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired,
@@ -31,4 +31,4 @@ ContactPagePresentation.propTypes = {
     reasons: PropTypes.array.isRequired
 };
 
-export default ContactPagePresentation;
+export default ContactPage;

@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
-import ListController from '../lists/list.presentation';
+import List from '../lists/list';
 import Data from './review.data';
-import Detail from './reviewDetail.presentation';
+import Detail from './reviewDetail';
 
-class ReviewListController extends ListController {
+class ReviewList extends React.Component {
 
     constructor() {
         super();
@@ -18,12 +18,12 @@ class ReviewListController extends ListController {
     }
 
     render() {
-        return(<ListController items={Data.reviews} itemRender={this.itemRender} size={this.props.size}/>);
+        return(<List items={Data.reviews} render={this.itemRender} size={this.props.size} />);
     }
 }
 
-ReviewListController.propTypes = {
+ReviewList.propTypes = {
     size: PropTypes.string
 };
 
-export default ReviewListController;
+export default ReviewList;

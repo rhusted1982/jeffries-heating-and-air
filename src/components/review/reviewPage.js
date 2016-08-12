@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from './reviewSlider.controller';
-import Title from './../title/title.presentation';
+import Slider from './reviewSlider';
+import Title from '../title/title';
 
 const ReviewPage = () => {
     return(

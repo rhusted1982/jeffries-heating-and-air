@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
-import Service from './service.presentation';
+import Service from './service';
 import Data from './service.data';
 import toastr from 'toastr';
 import $ from 'jquery';
 
-class ServiceController extends React.Component {
+class ServiceContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -55,8 +55,8 @@ class ServiceController extends React.Component {
     }
 }
 
-ServiceController.propTypes = {
+ServiceContainer.propTypes = {
     setWorking: PropTypes.func.isRequired
 };
 
-export default ServiceController;
+export default ServiceContainer;

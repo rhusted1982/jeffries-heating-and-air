@@ -1,8 +1,8 @@
 import React from 'react';
-import Title from './../title/title.presentation';
-import Link from './dealLink.presentation';
+import Title from '../title/title';
+import Link from './dealLink';
 
-const DealPresentation = () => {
+const Deal = () => {
     return (
         <div className="deal">
             <Title title="Deals" />
@@ -12,4 +12,4 @@ const DealPresentation = () => {
     );
 };
 
-export default DealPresentation;
+export default Deal;

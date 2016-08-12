@@ -1,8 +1,8 @@
 import React from 'react';
-import Home from './home.presentation';
-import Working from './../working/working.presentation';
+import Home from './home';
+import Working from '../working/working';
 
-class HomeController extends React.Component {
+class HomeContainer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -26,4 +26,4 @@ class HomeController extends React.Component {
     }
 }
 
-export default HomeController;
+export default HomeContainer;

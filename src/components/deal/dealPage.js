@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from './dealSlider.controller';
-import Title from './../title/title.presentation';
+import Slider from './dealSlider';
+import Title from '../title/title';
 
 const DealPage = () => {
     return(

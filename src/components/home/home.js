@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
-import About from './../about/about.presentation';
-import Service from './../service/service.controller';
-import Review from './../review/review.presentation';
+import About from '../about/about';
+import Service from '../service/serviceContainer';
+import Review from '../review/review';
 
-const HomePresentation = (props) => {
+const Home = (props) => {
     return (
         <div className="home">
             <div>
@@ -23,9 +23,9 @@ const HomePresentation = (props) => {
     );
 };
 
-HomePresentation.propTypes = {
+Home.propTypes = {
     phoneNumber: PropTypes.string.isRequired,
     setWorking: PropTypes.func.isRequired
 };
 
-export default HomePresentation;
+export default Home;

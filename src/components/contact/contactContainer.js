@@ -1,13 +1,13 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
-import Contact from './contactPage.presentation';
+import Contact from './contactPage';
 import $ from 'jquery';
 import toastr from 'toastr';
-import Working from './../working/working.presentation';
+import Working from '../working/working';
 import validator from 'validator';
 import Data from './contact.data';
 
-class ContactController extends React.Component {
+class ContactContainer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -115,4 +115,4 @@ class ContactController extends React.Component {
     }
 }
 
-export default ContactController;
+export default ContactContainer;
