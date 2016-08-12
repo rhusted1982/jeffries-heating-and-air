@@ -10,6 +10,7 @@ class ReviewList extends React.Component {
         this.left = true;
         this.itemRender = this.itemRender.bind(this);
     }
+
     itemRender(review) {
         const name = review.name ? review.name : 'Anonymous';
         const side = this.left ? 'left' : 'right';

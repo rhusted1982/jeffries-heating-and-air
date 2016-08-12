@@ -1,13 +1,9 @@
 import React, {PropTypes} from 'react';
 import SlickSlider from 'react-slick';
+import spliceAndRender from './spliceAndRender';
 
 const Slider = (props) => {
-    let items = [];
-    if(!props.size || props.size === 'all')
-        items = props.items;
-    else if(parseInt(~~Number(props.size)))
-        items = props.items.splice(0, ~~Number(props.size));
-    return(<SlickSlider {...props.settings}>{items.map(item => props.render(item))}</SlickSlider>);
+    return(<SlickSlider {...props.settings}>{spliceAndRender(props.items, props.render, props.size)}</SlickSlider>);
 };
 
 Slider.propTypes = {

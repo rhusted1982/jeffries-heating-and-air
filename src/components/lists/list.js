@@ -1,12 +1,9 @@
 import React, {PropTypes} from 'react';
+import spliceAndRender from './spliceAndRender';
 
 const List = (props) => {
-    let items = [];
-    if(!props.size || props.size === 'all')
-        items = props.items;
-    else if(parseInt(~~Number(props.size)))
-        items = props.items.splice(0, ~~Number(props.size));
-    return(<div>{items.map(item => props.render(item))}</div>);
+
+    return(<div>{spliceAndRender(props.items, props.render, props.size)}</div>);
 };
 
 List.propTypes = {
